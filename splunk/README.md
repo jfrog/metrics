@@ -93,7 +93,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
 Override the match directive(last section) of the downloaded `fluent.conf.rt` with the details given below
 
 ```
-<match jfrog.**>
+<match jfrog.metrics.**>
   @type splunk_hec
   data_type metric
   hec_host HEC_HOST
@@ -123,7 +123,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
 ```text
 <source>
   @type jfrog_metrics
-  @id metrics_hec_rt
+  @id metrics_hec_xr
   tag jfrog.metrics.xr
   metric_prefix 'jfrog.xray'
   interval 60s
@@ -136,7 +136,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
 Override the match directive(last section) of the downloaded `fluent.conf.xray` with the details given below
 
 ```
-<match jfrog.**>
+<match jfrog.metrics.**>
   @type splunk_hec
   data_type metric
   hec_host HEC_HOST
