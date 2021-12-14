@@ -70,7 +70,8 @@ Administrator will need to configure the HEC to accept data (enabled) and also c
 
 ## Fluentd Configuration for Splunk
 
-1. Refer the [documentation](https://github.com/jfrog/log-analytics-splunk#fluentd-configuration-for-splunk) for fluentd configuration, in addition below are the configurations needed,
+1. Refer the [documentation](https://github.com/jfrog/log-analytics-splunk#fluentd-configuration-for-splunk) for fluentd configuration, in addition below are the configurations needed
+2. For JFROG_API_KEY generation, refer steps [here](https://www.jfrog.com/confluence/display/JFROG/User+Profile#UserProfile-APIKey)
 
 ### Configuration for Artifactory Metrics
 
