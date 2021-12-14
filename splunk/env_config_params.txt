@@ -1,0 +1,4 @@
+export SPLUNK_HEC_HOST=<HOST>
+export SPLUNK_HEC_PORT=8088
+export SPLUNK_HEC_TOKEN=<TOKEN>
+export SPLUNK_METRICS_INDEX=jfrog_splunk_metrics
