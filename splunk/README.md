@@ -1,31 +1,35 @@
 # Jfrog Metrics Integration in Splunk
 
 ## Table of Contents
-1. [Splunk Setup](#splunk-setup)
-   * [Pre requisite setup](#pre-requisite-setup)
-2. [Environment Configuration](#environment-configuration)
-3. [Fluentd Installation](#fluentd-installation)
-4. [Fluentd Configuration for Splunk](#fluentd-configuration-for-splunk)
+1. [Pre requisite setup](#pre-requisite-setup)
+2. [Splunk Setup](#splunk-setup)
+3. [Environment Configuration](#environment-configuration)
+4. [Fluentd Installation](#fluentd-installation)
+5. [Fluentd Configuration for Splunk](#fluentd-configuration-for-splunk)
     * [Configuration for Artifactory Metrics](#configuration-for-artifactory-metrics)
     * [Configuration for Xray Metrics](#configuration-for-xray-metrics)
-5. [Artifactory and Xray Setup](#artifactory-and-xray-setup)
-6. [References](#references)
+6. [Artifactory and Xray Setup](#artifactory-and-xray-setup)
+7. [Installation References](#installation-references)
+
+## Pre requisite setup
+
+Prior to the metrics data to be sent to Splunk, Artifactory / Xray, FluentD needs to be setup, the  
+steps are detailed [here](https://github.com/jfrog/log-analytics-splunk#splunk-setup)
 
 ## Splunk Setup
 
-### Splunkbase App
+#### Splunkbase Application
 
-#### Pre requisite setup
+Install the ````JFrog Platform Log Analytics and Metrics```` app from Splunkbase [here](https://splunkbase.splunk.com/app/5023/)
 
-1. Steps [here](https://github.com/jfrog/log-analytics-splunk#splunk-setup)
 
-### Configure Splunk for Metrics
+#### Configure Splunk for Metrics
 
 Queries for rendering dashboards will need to use Index of Metrics type with a specific name, steps to configure are listed below.
 
 Administrator will need to configure the Index of Metrics type to accept metrics data. Steps are below.
 
-#### Create index jfrog_splunk_metics
+#### Configure new index of metrics data type by name 'jfrog_splunk_metics'
 ````text
 1. Open Splunk web console as adminstrator
 2. Click on "Settings" in dropdown select "Indexes"
@@ -158,9 +162,9 @@ Override the match directive(last section) of the downloaded `fluent.conf.xray` 
 
 1. [Enable Metrics for Artifactory and Xray](https://github.com/jfrog/metrics#setup)
 
-## References
+## Installation References
 
-1. [FluentD Installation - OS/Virtual Machine](https://github.com/jfrog/log-analytics-splunk#os--virtual-machine)
-2. [FluentD Installation - Docker](https://github.com/jfrog/log-analytics-splunk#docker)
-3. [FluentD Installation - Kubernetes with Helm](https://github.com/jfrog/log-analytics-splunk#kubernetes-deployment-with-helm)
-4. [FluentD Installation - Kubernetes without Helm](https://github.com/jfrog/log-analytics-splunk#kubernetes-deployment-without-helm)
+1. [OS/Virtual Machine](https://github.com/jfrog/log-analytics-splunk#os--virtual-machine)
+2. [Docker](https://github.com/jfrog/log-analytics-splunk#docker)
+3. [Kubernetes with Helm](https://github.com/jfrog/log-analytics-splunk#kubernetes-deployment-with-helm)
+4. [Kubernetes without Helm](https://github.com/jfrog/log-analytics-splunk#kubernetes-deployment-without-helm)
