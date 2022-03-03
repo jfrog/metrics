@@ -92,6 +92,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
   jpd_url JPD_URL
   username USER
   apikey JFROG_API_KEY
+  token JFROG_ADMIN_ACCESS_TOKEN
 </source>
 ```
 
@@ -135,6 +136,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
   jpd_url JPD_URL
   username USER
   apikey JFROG_API_KEY
+  token JFROG_ADMIN_ACCESS_TOKEN
 </source>
 ```
 
@@ -158,6 +160,12 @@ Override the match directive(last section) of the downloaded `fluent.conf.xray` 
   ca_file /path/to/ca.pem
 </match>
 ```
+
+## Note
+
+* For Artifactory v7.4 and below only API Key must be used,
+* For Artifactory v7.4 to 7.29 either Token or API Key can be used,
+* For Artifactory v7.30 and above token only must be used. 
 
 ## Artifactory and Xray Setup
 
