@@ -93,6 +93,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
   username USER
   apikey JFROG_API_KEY
   token JFROG_ADMIN_ACCESS_TOKEN
+  common_jpd false
 </source>
 ```
 
@@ -137,6 +138,7 @@ Fill in the JPD_URL, USER, JFROG_API_KEY fields in the source directive of the d
   username USER
   apikey JFROG_API_KEY
   token JFROG_ADMIN_ACCESS_TOKEN
+  common_jpd false
 </source>
 ```
 
@@ -166,6 +168,10 @@ Override the match directive(last section) of the downloaded `fluent.conf.xray` 
 * For Artifactory v7.4 and below only API Key must be used,
 * For Artifactory v7.4 to 7.29 either Token or API Key can be used,
 * For Artifactory v7.30 and above token only must be used. 
+
+* common_jpd: This flag should be set as true only for non-kubernetes installations or installations where JPD base URL is same to access both Artifactory and Xray
+
+	* ex: https://sample_base_url/artifactory or https://sample_base_url/xray 
 
 ## Artifactory and Xray Setup
 
