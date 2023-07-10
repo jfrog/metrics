@@ -1,4 +1,4 @@
-### Note: This repository is no longer relevant. All the JFrog log-analytic solutions have moved to separate repos
+### Note: This repository is no longer relevant. Metrics are now a part of the JFrog log-analytic solutions listed below
 
 * Splunk - https://github.com/jfrog/log-analytics-splunk
 * Datadog - https://github.com/jfrog/log-analytics-datadog
